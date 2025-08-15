@@ -62,7 +62,8 @@ class Server:
         current_index = index
 
         # collect page_size valid rows
-        while len(data) < page_size and current_index <= max(indexed_data.keys()):
+        while len(data) < page_size and 
+                current_index <= max(indexed_data.keys()):
             if current_index in indexed_data:
                 data.append(indexed_data[current_index])
             current_index += 1
